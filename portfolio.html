@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musa A. Abubakar | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+  <!-- Navbar -->
+  <header class="border-b border-gray-800 sticky top-0 bg-gray-900 z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <img src="your-image.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-indigo-500 shadow-lg" />
+        <span class="text-xl font-bold text-white">Musa</span>
+      </div>
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex">
+        <ul class="flex space-x-6 text-gray-300">
+          <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+          <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
+          <li><a href="#experiments" class="hover:text-indigo-400">Experiments</a></li>
+          <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
+          <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <ul class="flex flex-col space-y-3 text-gray-300">
+        <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+        <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
+        <li><a href="#experiments" class="hover:text-indigo-400">Experiments</a></li>
+        <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
+        <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center text-center py-16 px-6">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Hi, I'm Musa A. Abubakar</h1>
+    <p class="text-base md:text-xl text-gray-400 max-w-2xl">
+      Full-Stack Developer | AI Consultant | Product Designer
+    </p>
+    <a href="#contact" class="mt-6 px-6 py-3 bg-indigo-600 rounded-xl text-white hover:bg-indigo-500 transition">
+      Get in Touch
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I am a full-stack developer with expertise in AI, product design, and optimization theory. 
+      With a strong foundation in both technical and creative problem-solving, I build modern web applications, 
+      scalable systems, and user-friendly designs. Passionate about emerging technologies, I also consult businesses 
+      on AI adoption and automation strategies.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-6 max-w-5xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">Projects</h2>
+    
+    <!-- First 4 items visible -->
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Marstech Digital School</h3>
+        <p class="text-gray-400">An e-learning platform offering courses in product design and video editing.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">CliqueCFA</h3>
+        <p class="text-gray-400">A Paid-To-Click platform targeting Cameroon, connecting advertisers and users.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Crypto Investment Platform</h3>
+        <p class="text-gray-400">An upcoming platform for crypto investments in Cameroon with a TOo model.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Portfolio Website</h3>
+        <p class="text-gray-400">My personal portfolio showcasing projects, experiments, and design work.</p>
+      </div>
+    </div>
+
+    <!-- Hidden extra items -->
+    <div id="projects-hidden" class="grid gap-6 md:grid-cols-2 overflow-hidden transition-all duration-500 max-h-0 mt-6">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Extra Project 1</h3>
+        <p class="text-gray-400">Description of another project.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Extra Project 2</h3>
+        <p class="text-gray-400">Description of another project.</p>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <button 
+      class="flex items-center justify-center w-full mt-4 text-indigo-400 hover:text-indigo-300 focus:outline-none toggle-btn" 
+      data-target="projects-hidden">
+      Show More
+      <svg class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </button>
+  </section>
+
+  <!-- Experiments -->
+  <section id="experiments" class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">UI Experiments</h2>
+    
+    <!-- First 4 visible -->
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <a href="experiments/darkmode.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Dark Mode Toggle</h3>
+        <p class="text-gray-400">A simple and elegant dark mode switcher with smooth transitions.</p>
+      </a>
+      <a href="experiments/neumorphism.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Neumorphism</h3>
+        <p class="text-gray-400">Experimenting with soft shadows and glowing neumorphic buttons.</p>
+      </a>
+      <a href="experiments/glassmorphism.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Glassmorphism</h3>
+        <p class="text-gray-400">A frosted-glass inspired UI with translucent backgrounds.</p>
+      </a>
+      <a href="experiments/card.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Product Card</h3>
+        <p class="text-gray-400">A clean, glassmorphic product card with rating and hidden details.</p>
+      </a>
+    </div>
+
+    <!-- Hidden extra -->
+    <div id="experiments-hidden" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 overflow-hidden transition-all duration-500 max-h-0 mt-6">
+      <a href="experiments/menu.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Animated Menu</h3>
+        <p class="text-gray-400">A sliding menu with smooth opening and closing transitions.</p>
+      </a>
+      <a href="experiments/login.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Login Page</h3>
+        <p class="text-gray-400">A minimal login screen with neumorphic input fields.</p>
+      </a>
+      <a href="experiments/loader.html" target="_blank" class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition block">
+        <h3 class="text-lg font-bold mb-2">Loading Animation</h3>
+        <p class="text-gray-400">A CSS-only loader with smooth motion effects.</p>
+      </a>
+    </div>
+
+    <!-- Button -->
+    <button 
+      class="flex items-center justify-center w-full mt-4 text-indigo-400 hover:text-indigo-300 focus:outline-none toggle-btn" 
+      data-target="experiments-hidden">
+      Show More
+      <svg class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </button>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">Skills</h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="px-4 py-2 bg-gray-800 rounded-lg">JavaScript</span>
+      <span class="px-4 py-2 bg-gray-800 rounded-lg">Python</span>
+      <span class="px-4 py-2 bg-gray-800 rounded-lg">AI/ML</span>
+      <span class="px-4 py-2 bg-gray-800 rounded-lg">UI/UX Design</span>
+      <span class="px-4 py-2 bg-gray-800 rounded-lg">Node.js</span>
+      <span class="px-4 py-2 bg-gray-800 rounded-lg">React</span>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">Contact</h2>
+    <p class="text-gray-300 mb-6">Let’s collaborate on your next big project.</p>
+    <a href="mailto:youremail@example.com" 
+       class="px-6 py-3 bg-indigo-600 rounded-xl text-white hover:bg-indigo-500 transition">
+       Email Me
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-800 text-gray-500 text-sm">
+    © 2025 Musa A. Abubakar. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Show More / Less toggles
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const content = document.getElementById(targetId);
+        const isHidden = content.classList.contains('max-h-0');
+
+        if (isHidden) {
+          content.classList.remove('max-h-0');
+          content.classList.add('max-h-[2000px]');
+          btn.innerHTML = 'Show Less <svg class="w-5 h-5 ml-2 transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>';
+        } else {
+          content.classList.add('max-h-0');
+          content.classList.remove('max-h-[2000px]');
+          btn.innerHTML = 'Show More <svg class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
